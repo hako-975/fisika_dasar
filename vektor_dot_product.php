@@ -22,9 +22,6 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
   $a_kali_b = $a * $b;
 
   $hasil = $a_titik_b / $a_kali_b;
-  $hasil = cos($hasil);
-  $hasil = 1 / $hasil;
-  $hasil = rad2deg($hasil);
 }
   
 ?>
