@@ -2,7 +2,7 @@
 
 $hasil = 0;
 
-if (isset($_POST['btn_hitung_vektor_dot_product'])) {
+if (isset($_POST['btn_hitung_vektor_cross_product'])) {
   $a_i = $_POST['a_i'];
   $a_j = $_POST['a_j'];
   $a_k = $_POST['a_k'];
@@ -22,9 +22,7 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
   $a_kali_b = $a * $b;
 
   $hasil = $a_titik_b / $a_kali_b;
-  $hasil = cos($hasil);
-  $hasil = 1 / $hasil;
-  $hasil = rad2deg($hasil);
+
 }
   
 ?>
@@ -40,7 +38,7 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <title>Vektor Dot Product</title>
+    <title>Vektor cross Product</title>
   </head>
   <body>
     <?php include 'navbar.php'; ?>
@@ -48,14 +46,14 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
     <div class="container mb-5">
       <div class="row" id="luas_jajar_genjang">
         <div class="col">
-          <h3>Rumus Vektor Dot Product (&theta;)</h3>
+          <h3>Rumus Vektor cross Product (&theta;)</h3>
           <p>
-            a . b = a b cos &theta; <br>
-            cos &theta; = a . b / a b <br>
+            a . b = a b sin &theta; <br>
+            sin &theta; = a . b / a b <br>
             <hr style="height: 0px; margin: 0; padding: 0; width: 11rem">
-            cos &theta; = Dot Product 
+            sin &theta; = cross Product 
           </p>
-          <h4>Alat Perhitungan Vektor Dot Product</h4>  
+          <h4>Alat Perhitungan Vektor cross Product</h4>  
           <form method="post">
             <div class="row">
               <div class="col-sm-4">
@@ -97,14 +95,14 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary" name="btn_hitung_vektor_dot_product">Hitung</button>
-            <a href="vektor_dot_product.php" class="btn btn-success">Reset</a>
+            <button type="submit" class="btn btn-primary" name="btn_hitung_vektor_cross_product">Hitung</button>
+            <a href="vektor_cross_product.php" class="btn btn-success">Reset</a>
           </form>
           <div class="row">
             <div class="col-4">
               <div class="form-group">
                 <label for="hasil">Hasil</label>
-                <input class="form-control" disabled readonly value="cos &theta; = <?= $hasil; ?>">
+                <input class="form-control" disabled readonly value="sin &theta; = <?= $hasil; ?>">
               </div>
             </div>
           </div>
