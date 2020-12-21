@@ -1,0 +1,45 @@
+*
+{
+	font-size: 18px;
+}
+
+body
+{
+	font-family: 'Poppins', 'roboto', sans-serif;
+}
+
+.jumbotron 
+{
+	min-height: 700px;
+}
+
+.jumbotron-fluid
+{
+	background-size: 100%;
+	background: url('../img/bg.jpg');
+	background-repeat: no-repeat;
+}
+
+.text-shadow 
+{
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/*scroll*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {     
+    background: #eaeaea;    
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #28a745;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #068523;
+}

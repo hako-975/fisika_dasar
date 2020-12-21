@@ -22,6 +22,8 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
   $a_kali_b = $a * $b;
 
   $hasil = $a_titik_b / $a_kali_b;
+  $hasil = acos($hasil);
+  $hasil = rad2deg($hasil);
 }
   
 ?>
@@ -40,65 +42,89 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
     <?php include 'navbar.php'; ?>
     
     <div class="container mb-5">
-      <div class="row" id="luas_jajar_genjang">
+      <div class="row">
         <div class="col">
-          <h3>Rumus Vektor Dot Product (&theta;)</h3>
-          <p>
-            a . b = a b cos &theta; <br>
-            cos &theta; = a . b / a b <br>
-            <hr style="height: 0px; margin: 0; padding: 0; width: 11rem">
-            cos &theta; = Dot Product 
-          </p>
-          <h4>Alat Perhitungan Vektor Dot Product</h4>  
-          <form method="post">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="a_i">Masukkan nilai a (i)</label>
-                  <input type="number" class="form-control" name="a_i" required value="<?= ($a_i != null) ? $a_i : '' ?>">
+          <div class="row my-2">
+            <div class="col-lg">
+              <h3>Rumus Vektor Dot Product (&theta;)</h3>
+              <div class="border border-dark p-2 rounded" style="width: 10rem">
+                a . b = a b cos &theta;
+                <div class="row">
+                  <div class="col pr-0">
+                    cos &theta; = 
+                  </div>
+                  <div class="col pl-0">
+                    a . b <hr class="ml-0 my-0 py-0" style="background-color: black; width: 2.75rem;">
+                    a b
+                  </div>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="a_j">Masukkan nilai a (j)</label>
-                  <input type="number" class="form-control" name="a_j" required value="<?= ($a_j != null) ? $a_j : '' ?>">
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="a_k">Masukkan nilai a (k)</label>
-                  <input type="number" class="form-control" name="a_k" required value="<?= ($a_k != null) ? $a_k : '' ?>">
-                </div>
-              </div>
+              <table class="my-2">
+                <tr>
+                  <td>cos</td>
+                  <td style="width: 2rem" class="text-center">=</td>
+                  <td>cosinus (&theta;)</td>
+                </tr>
+              </table> 
+              </p>
             </div>
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="b_i">Masukkan nilai b (i)</label>
-                  <input type="number" class="form-control" name="b_i" required value="<?= ($b_i != null) ? $b_i : '' ?>">
+          </div>
+          <div class="row my-2">
+            <div class="col-lg">
+              <h4>Alat Perhitungan Vektor Dot Product</h4>  
+              <form method="post">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="a_i">Masukkan nilai a (i)</label>
+                      <input type="number" class="form-control" name="a_i" required value="<?= (isset($a_i)) ? $a_i : 0 ?>">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="a_j">Masukkan nilai a (j)</label>
+                      <input type="number" class="form-control" name="a_j" required value="<?= (isset($a_j)) ? $a_j : 0 ?>">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="a_k">Masukkan nilai a (k)</label>
+                      <input type="number" class="form-control" name="a_k" required value="<?= (isset($a_k)) ? $a_k : 0 ?>">
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="b_j">Masukkan nilai b (j)</label>
-                  <input type="number" class="form-control" name="b_j" required value="<?= ($b_j != null) ? $b_j : '' ?>">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="b_i">Masukkan nilai b (i)</label>
+                      <input type="number" class="form-control" name="b_i" required value="<?= (isset($b_i)) ? $b_i : 0 ?>">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="b_j">Masukkan nilai b (j)</label>
+                      <input type="number" class="form-control" name="b_j" required value="<?= (isset($b_j)) ? $b_j : 0 ?>">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="b_k">Masukkan nilai b (k)</label>
+                      <input type="number" class="form-control" name="b_k" required value="<?= (isset($b_k)) ? $b_k : 0 ?>">
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="b_k">Masukkan nilai b (k)</label>
-                  <input type="number" class="form-control" name="b_k" required value="<?= ($b_k != null) ? $b_k : '' ?>">
+                <button type="submit" class="btn btn-primary" name="btn_hitung_vektor_dot_product"><i class="fas fa-fw fa-save"></i> Hitung</button>
+                <a href="vektor_dot_product.php" class="btn btn-success"><i class="fas fa-fw fa-redo"></i> Reset</a>
+              </form>
+              <div class="row mt-4">
+                <div class="col">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Hasil</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="&theta; = <?= $hasil; ?>">
+                  </div>
                 </div>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary" name="btn_hitung_vektor_dot_product">Hitung</button>
-            <a href="vektor_dot_product.php" class="btn btn-success">Reset</a>
-          </form>
-          <div class="row">
-            <div class="col-4">
-              <div class="form-group">
-                <label for="hasil">Hasil</label>
-                <input class="form-control" disabled readonly value="cos &theta; = <?= $hasil; ?>">
               </div>
             </div>
           </div>

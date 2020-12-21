@@ -25,68 +25,96 @@ if (isset($_POST['btn_hitung_vektor_luas_jajaran_genjang'])) {
     <?php include 'navbar.php'; ?>
     
     <div class="container mb-5">
-      <div class="row" id="luas_jajar_genjang">
+      <div class="row">
         <div class="col">
-          <h3>Rumus Vektor Luas Jajar Genjang (L)</h3>
-          <p>
-            L = p x l x sin sudut vector
-            <hr style="height: 0px; margin: 0; padding: 0; width: 11rem">
-            L = Luas (cm<sup>2</sup>)
-            <br> 
-            p = panjang (cm)
-            <br> 
-            l = lebar (cm)
-          </p>
-          <h4>Alat Perhitungan Vektor Usaha</h4>  
-          <form method="post">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="panjang">Masukkan nilai panjang (cm)</label>
-                  <input type="number" class="form-control" name="panjang" required value="<?= ($panjang != null) ? $panjang : '' ?>">
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="lebar">Masukkan nilai lebar (cm)</label>
-                  <input type="number" class="form-control" name="lebar" required value="<?= ($lebar != null) ? $lebar : '' ?>">
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="sin">Masukkan nilai sudut vektor (sin)</label>
-                  <input type="number" class="form-control" name="sin" required value="<?= ($sin != null) ? $sin : '' ?>">
-                </div>
-              </div>
+          <div class="row my-3">
+            <div class="col-lg">
+              <h3>Rumus Vektor Luas Jajaran Genjang (L)</h3>
+              <div class="border border-dark p-2 rounded" style="width: 15rem">L = p . l . sin sudut vektor</div>
+              <table class="my-2">
+                <tr>
+                  <td>L</td>
+                  <td style="width: 2rem" class="text-center">=</td>
+                  <td>Luas (cm<sup>2</sup>)</td>
+                </tr>
+                <tr>
+                  <td>p</td>
+                  <td style="width: 2rem" class="text-center">=</td>
+                  <td>panjang (cm)</td>
+                </tr>
+                <tr>
+                  <td>l</td>
+                  <td style="width: 2rem" class="text-center">=</td>
+                  <td>lebar (cm)</td>
+                </tr>
+                <tr>
+                  <td>sin</td>
+                  <td style="width: 2rem" class="text-center">=</td>
+                  <td>sinus (&theta;)</td>
+                </tr>
+              </table>
             </div>
-            <button type="submit" class="btn btn-primary" name="btn_hitung_vektor_luas_jajaran_genjang">Hitung</button>
-            <a href="vektor_luas_jajaran_genjang.php" class="btn btn-success">Reset</a>
-          </form>
-          <div class="row">
-            <div class="col-4">
-              <div class="form-group">
-                <label for="hasil">Hasil</label>
-                <input class="form-control" disabled readonly value="<?= $hasil; ?> cm2">
+          </div> 
+          <div class="row my-3">
+            <div class="col-lg">
+              <h4>Alat Perhitungan Vektor Usaha</h4>  
+              <form method="post">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="panjang">Masukkan nilai panjang (cm)</label>
+                      <input type="number" class="form-control" name="panjang" required value="<?= (isset($panjang)) ? $panjang : 0 ?>">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="lebar">Masukkan nilai lebar (cm)</label>
+                      <input type="number" class="form-control" name="lebar" required value="<?= (isset($lebar)) ? $lebar : 0 ?>">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="sin">Masukkan nilai sudut vektor (sin &theta;)</label>
+                      <input type="number" class="form-control" name="sin" required value="<?= (isset($sin)) ? $sin : 0 ?>">
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" name="btn_hitung_vektor_luas_jajaran_genjang"><i class="fas fa-fw fa-save"></i> Hitung</button>
+                <a href="vektor_luas_jajaran_genjang.php" class="btn btn-success"><i class="fas fa-fw fa-redo"></i> Reset</a>
+              </form>
+              <div class="row mt-4">
+                <div class="col-lg-4">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Hasil</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<?= $hasil; ?> (cm2)">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <h4>Contoh penggunaan Vektor Luas Jajaran Genjang</h4>
-          <p>
-            Dua buah vektor masing-masing panjangnya 7 cm dan 12 cm. Kedua vektor
-            membentuk sudut 30 deg
-            . Hitung luas jajaran genjang yang dibentuk oleh kedua vektor
-            tersebut.
-            Diketahui : <br>
-            P = 7 cm <br>
-            L = 12 cm <br>
-            Sudut vektor = 30 deg <br>
-            Ditanya : L <br>
-            Jawab : <br>
-            L = P x L sin sudut vector <br>
-            = 7 cm x 12 cm x sin(30) <br>
-            = 7 cm x 12 cm x ½ <br>
-            = 42 cm<sup>2</sup>
-          </p>
+          <div class="row my-3">
+            <div class="col-lg">
+              <h4>Contoh penggunaan Vektor Luas Jajaran Genjang</h4>
+              <p>
+                Dua buah vektor masing-masing panjangnya 7 cm dan 12 cm. Kedua vektor
+                membentuk sudut 30 deg
+                . Hitung luas jajaran genjang yang dibentuk oleh kedua vektor
+                tersebut.
+                Diketahui : <br>
+                P = 7 cm <br>
+                L = 12 cm <br>
+                Sudut vektor = 30 deg <br>
+                Ditanya : L <br>
+                Jawab : <br>
+                L = P x L sin sudut vector <br>
+                = 7 cm x 12 cm x sin(30) <br>
+                = 7 cm x 12 cm x ½ <br>
+                = 42 cm<sup>2</sup>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

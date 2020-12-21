@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <div class="dropdown">
+        <div class="dropdown my-auto">
           <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Vektor
           </button>
@@ -17,12 +17,18 @@
             <a class="dropdown-item" href="vektor_cross_product.php">Vektor Cross Product</a>
           </div>
         </div>
-
-        <a class="nav-link" href="glb.php">GLB</a>
-        <a class="nav-link" href="glbb.php">GLBB</a>
+        <div class="dropdown my-auto">
+          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Gerak
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="glb.php">GLB</a>
+            <a class="dropdown-item" href="glbb.php">GLBB</a>
+          </div>
+        </div>
         <a class="nav-link" href="energi_kinetik.php">Energi Kinetik</a>
       </div>
     </div>
   </div>
 </nav>
-<div class="mb-3 pb-3"><br></div>
+<div class="mb-4 pb-3"><br></div>
