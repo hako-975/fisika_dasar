@@ -122,7 +122,7 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">Hasil</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="&theta; = <?= $hasil; ?>">
+                    <input readonly type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="&theta; = <?= $hasil; ?>">
                   </div>
                 </div>
               </div>

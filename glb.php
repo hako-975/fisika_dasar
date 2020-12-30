@@ -61,7 +61,7 @@ if (isset($_POST['btn_hitung_glb'])) {
             <div class="col-4">
               <div class="form-group">
                 <label for="hasil">Hasil</label>
-                <textarea class="form-control" disabled readonly><?= $hasil_glb; ?></textarea>
+                <textarea readonly class="form-control" disabled readonly><?= $hasil_glb; ?></textarea>
               </div>
             </div>
           </div>

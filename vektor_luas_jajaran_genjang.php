@@ -88,7 +88,7 @@ if (isset($_POST['btn_hitung_vektor_luas_jajaran_genjang'])) {
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">Hasil</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<?= $hasil; ?> (cm2)">
+                    <input readonly type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<?= $hasil; ?> (cm2)">
                   </div>
                 </div>
               </div>

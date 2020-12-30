@@ -88,7 +88,7 @@ if (isset($_POST['btn_hitung_vektor_usaha'])) {
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">Hasil</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="W = <?= $hasil; ?> (Joule)">
+                    <input readonly type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="W = <?= $hasil; ?> (Joule)">
                   </div>
                 </div>
               </div>
