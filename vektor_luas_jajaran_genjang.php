@@ -83,8 +83,8 @@ if (isset($_POST['btn_hitung_vektor_luas_jajaran_genjang'])) {
                 <a href="vektor_luas_jajaran_genjang.php" class="btn btn-success"><i class="fas fa-fw fa-redo"></i> Reset</a>
               </form>
               <div class="row mt-4">
-                <div class="col-lg-4">
-                  <div class="input-group mb-3">
+                <div class="col">
+                  <div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">Hasil</span>
                     </div>
