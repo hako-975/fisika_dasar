@@ -55,7 +55,7 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
                   </div>
                   <div class="col pl-0">
                     a . b <hr class="ml-0 my-0 py-0" style="background-color: black; width: 2.75rem;">
-                    &radic;a &radic;b
+                    &radic;a<sup>2</sup> &radic;b<sup>2</sup>
                   </div>
                 </div>
               </div>
