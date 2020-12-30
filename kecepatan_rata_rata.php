@@ -1,11 +1,9 @@
 <?php 
 $hasil = 0;
-if (isset($_POST['btn_hitung_glbb'])) {
-  $kecepatan_awal = $_POST['kecepatan_awal'];
+if (isset($_POST['btn_hitung_kecepatan_rata_rata'])) {
+  $perpindahan = $_POST['perpindahan'];
   $waktu = $_POST['waktu'];
-  $percepatan = $_POST['percepatan'];
-  // s = Vo . t + 1/2 . a . t^2
-  $hasil = $kecepatan_awal * $waktu + 1/2 * $percepatan * $waktu * $waktu;
+  $hasil = $perpindahan / $waktu;
 }
 
  ?>
@@ -16,7 +14,7 @@ if (isset($_POST['btn_hitung_glbb'])) {
     <!-- include-css -->
     <?php include 'include/include-css.php'; ?>
 
-    <title>GLBB</title>
+    <title>Kecepatan Rata-Rata</title>
   </head>
   <body>
     <?php include 'navbar.php'; ?>
@@ -26,58 +24,57 @@ if (isset($_POST['btn_hitung_glbb'])) {
         <div class="col">
           <div class="row my-3">
             <div class="col-lg">
-              <h3>Rumus GLBB</h3>
-              <div class="border border-dark p-2 rounded" style="width: 12rem">s = Vo . t + 1/2 . a . t<sup>2</sup></div>
+              <h3>Rumus Kecepatan Rata-Rata (Vag)</h3>
+              <div class="border border-dark p-2 rounded" style="width: 10rem">
+                <div class="row">
+                  <div class="col-5 pr-0">
+                    Vag = 
+                  </div>
+                  <div class="col-4 text-center pl-1">
+                    <a href="perpindahan.php">&Delta;&#119909;</a> <hr class="ml-0 my-0 py-0" style="background-color: black; width: 3rem;">
+                    &Delta;t
+                  </div>
+                </div>
+              </div>
               <table class="my-2">
                 <tr>
-                  <td>s</td>
+                  <td>Vag</td>
                   <td style="width: 2rem" class="text-center">=</td>
-                  <td>Jarak (m)</td>
+                  <td>Kecepatan Rata-Rata (m/s)</td>
                 </tr>
                 <tr>
-                  <td>Vo</td>
+                  <td>&Delta;&#119909;</td>
                   <td style="width: 2rem" class="text-center">=</td>
-                  <td>Kecepatan awal (m/s)</td>
+                  <td>Perpindahan (m)</td>
                 </tr>
                 <tr>
-                  <td>t</td>
+                  <td>&Delta;t</td>
                   <td style="width: 2rem" class="text-center">=</td>
-                  <td>Waktu (s)</td>
-                </tr>
-                <tr>
-                  <td>a</td>
-                  <td style="width: 2rem" class="text-center">=</td>
-                  <td>Percepatan (m/s<sup>2</sup>)</td>
+                  <td>waktu (s)</td>
                 </tr>
               </table>   
             </div>
           </div>
           <div class="row my-3">
             <div class="col-lg">
-              <h4>Alat Perhitungan GLBB</h4>          
+              <h4>Alat Perhitungan Kecepatan Rata-Rata</h4>          
               <form method="post">
                 <div class="row">
                   <div class="col-sm-4">
                     <div class="form-group">
-                      <label for="kecepatan_awal">Masukkan nilai kecepatan awal (m/s)</label>
-                      <input type="number" class="form-control" name="kecepatan_awal" required value="<?= isset($kecepatan_awal) ? $kecepatan_awal : 0 ?>">
+                      <label for="perpindahan">Masukkan nilai &Delta;&#119909; = perpindahan (m)</label>
+                      <input type="number" class="form-control" name="perpindahan" required value="<?= isset($perpindahan) ? $perpindahan : 0 ?>">
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="form-group">
-                      <label for="waktu">Masukkan nilai waktu (s)</label>
+                      <label for="waktu">Masukkan nilai &Delta;t = waktu (s)</label>
                       <input type="number" class="form-control" name="waktu" required value="<?= isset($waktu) ? $waktu : 0 ?>">
                     </div>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label for="percepatan">Masukkan nilai percepatan (m/s<sup>2</sup>)</label>
-                      <input type="number" class="form-control" name="percepatan" required value="<?= isset($percepatan) ? $percepatan : 0 ?>">
-                    </div>
-                  </div>
                 </div>
-                <button type="submit" class="btn btn-primary" name="btn_hitung_glbb">Hitung</button>
-                <a href="glbb.php" class="btn btn-success">Reset</a>
+                <button type="submit" class="btn btn-primary" name="btn_hitung_kecepatan_rata_rata">Hitung</button>
+                <a href="kecepatan_rata_rata.php" class="btn btn-success">Reset</a>
               </form>
               <div class="row mt-4">
                 <div class="col">
@@ -85,14 +82,14 @@ if (isset($_POST['btn_hitung_glbb'])) {
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">Hasil</span>
                     </div>
-                    <input readonly type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="s = <?= $hasil; ?> (m)">
+                    <input readonly type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="Vag = <?= $hasil; ?> (m/s)">
                   </div>
                 </div>
               </div>
             </div>
           </div>
           
-          <!-- <h4>Contoh penggunaan GLBB</h4>
+          <!-- <h4>Contoh penggunaan kecepatan_rata_rata</h4>
           <p>
             
           </p> -->

@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <div class="dropdown my-auto">
-          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn btn-success mx-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Vektor
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -18,10 +18,14 @@
           </div>
         </div>
         <div class="dropdown my-auto">
-          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Gerak
+          <button class="btn btn-success mx-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Gerak Dimensi
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="perpindahan.php">Perpindahan</a>
+            <a class="dropdown-item" href="percepatan.php">Percepatan</a>
+            <a class="dropdown-item" href="kecepatan_rata_rata.php">Kecepatan Rata-Rata</a>
+            <a class="dropdown-item" href="percepatan_rata_rata.php">Percepatan Rata-Rata</a>
             <a class="dropdown-item" href="glb.php">GLB</a>
             <a class="dropdown-item" href="glbb.php">GLBB</a>
           </div>

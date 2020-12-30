@@ -30,7 +30,7 @@ if (isset($_POST['btn_hitung_vektor_usaha'])) {
           <div class="row my-3">
             <div class="col-lg">
               <h3>Rumus Vektor Usaha (W)</h3>
-              <div class="border border-dark p-2 rounded" style="width: 10rem">W = F . cos . s</div>
+              <div class="border border-dark p-2 rounded" style="width: 8rem">W = F . cos . s</div>
               <table class="my-2">
                 <tr>
                   <td>W</td>

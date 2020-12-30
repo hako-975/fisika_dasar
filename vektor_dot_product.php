@@ -47,15 +47,15 @@ if (isset($_POST['btn_hitung_vektor_dot_product'])) {
           <div class="row my-2">
             <div class="col-lg">
               <h3>Rumus Vektor Dot Product (&theta;)</h3>
-              <div class="border border-dark p-2 rounded" style="width: 10rem">
-                a . b = a b cos &theta;
+              <div class="border border-dark p-2 rounded" style="width: 14rem">
+                a . b = &radic;a<sup>2</sup> . &radic;b<sup>2</sup> . cos &theta;
                 <div class="row">
-                  <div class="col pr-0">
+                  <div class="col-4 pr-0">
                     cos &theta; = 
                   </div>
-                  <div class="col pl-0">
-                    a . b <hr class="ml-0 my-0 py-0" style="background-color: black; width: 2.75rem;">
-                    &radic;a<sup>2</sup> &radic;b<sup>2</sup>
+                  <div class="col-5 text-center pl-0">
+                    a . b <hr class="ml-0 my-0 py-0" style="background-color: black; width: 5.5rem;">
+                    &radic;a<sup>2</sup> . &radic;b<sup>2</sup>
                   </div>
                 </div>
               </div>

@@ -30,7 +30,7 @@ if (isset($_POST['btn_hitung_vektor_luas_jajaran_genjang'])) {
           <div class="row my-3">
             <div class="col-lg">
               <h3>Rumus Vektor Luas Jajaran Genjang (L)</h3>
-              <div class="border border-dark p-2 rounded" style="width: 15rem">L = p . l . sin sudut vektor</div>
+              <div class="border border-dark p-2 rounded" style="width: 7rem">L = p . l . sin</div>
               <table class="my-2">
                 <tr>
                   <td>L</td>
@@ -50,7 +50,7 @@ if (isset($_POST['btn_hitung_vektor_luas_jajaran_genjang'])) {
                 <tr>
                   <td>sin</td>
                   <td style="width: 2rem" class="text-center">=</td>
-                  <td>sinus (&theta;)</td>
+                  <td>sudut vektor sinus (&theta;)</td>
                 </tr>
               </table>
             </div>
@@ -62,19 +62,19 @@ if (isset($_POST['btn_hitung_vektor_luas_jajaran_genjang'])) {
                 <div class="row">
                   <div class="col-sm-4">
                     <div class="form-group">
-                      <label for="panjang">Masukkan nilai panjang (cm)</label>
+                      <label for="panjang">Masukkan nilai p = panjang (cm)</label>
                       <input type="number" class="form-control" name="panjang" required value="<?= (isset($panjang)) ? $panjang : 0 ?>">
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="form-group">
-                      <label for="lebar">Masukkan nilai lebar (cm)</label>
+                      <label for="lebar">Masukkan nilai l = lebar (cm)</label>
                       <input type="number" class="form-control" name="lebar" required value="<?= (isset($lebar)) ? $lebar : 0 ?>">
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="form-group">
-                      <label for="sin">Masukkan nilai sudut vektor (sin &theta;)</label>
+                      <label for="sin">Masukkan nilai sin = sudut vektor (&theta;)</label>
                       <input type="number" class="form-control" name="sin" required value="<?= (isset($sin)) ? $sin : 0 ?>">
                     </div>
                   </div>
